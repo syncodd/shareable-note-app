@@ -2,26 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+
+/* styles/globals.css */
+.layout {
+  background: #f0f0f0;
+  padding: 10px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.grid-item {
+  position: fixed;
+  background: #3498db;
+  border: 1px solid #ccc;
+  width: 100%; /* Set the width of the grid item */
+  height: 100%; /* Set the height of the grid item */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: grab;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.draggable-component {
+  cursor: text;
+  background: #e74c3c;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  pointer-events: stroke;
+}
+
+.editableText {
+  /* Define your styles for the editable input here */
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.plainText {
+  /* Define your styles for the plain text here */
+  font-size: 16px;
 }
